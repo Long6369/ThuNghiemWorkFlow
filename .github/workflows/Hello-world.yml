@@ -1,0 +1,17 @@
+name: thử nghiệm đọc file README
+on:
+  push:
+    branches: ["main"]  #chạy khi có code vào main
+
+jobs:
+  thuc_hanh_doc_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bước 1 xin chào 
+        run: echo "hellooo"
+      
+      - name: Bước 2 - tải code
+        uses: actions/checkout@v6.0.2 
+
+      - name: bước 3 - Đọc file
+        run:  cat README.md
